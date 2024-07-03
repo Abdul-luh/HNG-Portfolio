@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="Project.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<nav>
+			<div class="left">
+				<div class="Logo">Abdullah Odulate</div>
+			</div>
+
+			<div class="date-time">
+				<p data-testid="currentDay" id="dayTag">Tuesday</p>
+				<p data-testid="currentTime" id="timeTag">13:29:53</p>
+			</div>
+		</nav>
+
+		<div class="profile-img">
+			<img class="name" src="Images/image.png" />
+		</div>
+
+		<div class="text-section">
+			<h1>Hello HNG, I'm Abdullah.</h1>
+
+			<p>
+				A Frontend intern at the reputable HNG program and willing to
+				collaborate with even minds and acheive great things while I am here.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum vitae
+				dolores aliquam repudiandae. Impedit cupiditate itaque facilis nulla
+				rerum fuga quibusdam numquam quam nisi mollitia eaque ratione, nesciunt
+				consequuntur! Deserunt!
+			</p>
+		</div>
+
+		<footer>
+			<ul>
+				<h1>Contact</h1>
+				<li data-testid="slackName">Abdulllah Odulate</li>
+				<li data-testid="slackEmail">
+					<a href="mailto:abdulluhodulate@gmail.com"
+						>abdullluodulate@gmail.com</a
+					>
+				</li>
+
+				<li>
+					<a href="https://web.facebook.com/itzhart.hart">facebook</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/abdulluhodulate">Twitter</a>
+				</li>
+				<li>
+					<a href="https://linkedin.com/in/abdullah-odulate-a0264024b"
+						>LinkedIn</a
+					>
+				</li>
+				<li>
+					<a href="https://github.com/Abdul-luh">Github </a>
+				</li>
+			</ul>
+
+			<ul>
+				<h1>Other Links</h1>
+				<li data-testid="hngLink">
+					<a href=" http://hng.tech/learn.Attribute"> HNG Link </a>
+				</li>
+				<li data-testid="keywordLink">
+					<a href=" http://keyword.dogAttribute"> Keyword Link </a>
+				</li>
+				<li data-testid="scrapeanywebLink">
+					<a href="http://scrapeanyweb.siteAttribute"> ScrapeAny web Link </a>
+				</li>
+			</ul>
+		</footer>
+
+		<script>
+			const daysOfWeek = [
+				"Sunday",
+				"Monday",
+				"Tuesday",
+				"Wednesday",
+				"Friday",
+				"Saturday",
+			];
+
+			setInterval(() => {
+				let dayTag = document.querySelector("#dayTag");
+				let timeTag = document.querySelector("#timeTag");
+				const date = new Date();
+				let H = date.getHours();
+				let M = date.getMinutes();
+				let S = date.getMinutes();
+
+				timeTag.textContent = `${H}:${M}:${S}`;
+				dayTag.textContent = daysOfWeek[date.getDay()];
+
+				console.log(`${H}:${M}:${S}`);
+			}, 1000);
+		</script>
+	</body>
+</html>
